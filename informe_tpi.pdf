@@ -9,7 +9,7 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
 endobj
 4 0 obj
-<< /Length 1771 >>
+<< /Length 1756 >>
 stream
 BT
 /F1 11 Tf
@@ -31,7 +31,7 @@ T*
 T*
 (Integrantes: Acuña Leandro - Alan Benitez) Tj
 T*
-(Fecha de entrega: pendiente) Tj
+(Fecha de entrega: 2 de junio de 2026) Tj
 T*
 () Tj
 T*
@@ -47,11 +47,9 @@ T*
 T*
 (4. Flujo del programa) Tj
 T*
-(5. Capturas de ejecucion) Tj
+(5. Dificultades y conclusiones) Tj
 T*
-(6. Dificultades y conclusiones) Tj
-T*
-(7. Bibliografia) Tj
+(6. Bibliografia) Tj
 T*
 () Tj
 T*
@@ -111,6 +109,8 @@ T*
 T*
 (CONDICIONALES) Tj
 T*
+() Tj
+T*
 (Pagina 1) Tj
 ET
 endstream
@@ -125,8 +125,6 @@ BT
 /F1 11 Tf
 50 790 Td
 14 TL
-() Tj
-T*
 (Las estructuras condicionales permiten tomar decisiones segun la opcion elegida por el) Tj
 T*
 (usuario o segun el resultado de una validacion.) Tj
@@ -221,6 +219,8 @@ T*
 T*
 (```) Tj
 T*
+() Tj
+T*
 (Pagina 2) Tj
 ET
 endstream
@@ -229,22 +229,12 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 6 0 R >>
 endobj
 8 0 obj
-<< /Length 794 >>
+<< /Length 675 >>
 stream
 BT
 /F1 11 Tf
 50 790 Td
 14 TL
-() Tj
-T*
-(CAPTURAS DE EJECUCION) Tj
-T*
-() Tj
-T*
-(Pendiente: agregar capturas del programa funcionando.) Tj
-T*
-() Tj
-T*
 (DIFICULTADES Y CONCLUSIONES) Tj
 T*
 () Tj
@@ -285,13 +275,13 @@ xref
 0000000058 00000 n 
 0000000127 00000 n 
 0000000224 00000 n 
-0000002047 00000 n 
-0000002173 00000 n 
-0000003856 00000 n 
-0000003982 00000 n 
-0000004827 00000 n 
+0000002032 00000 n 
+0000002158 00000 n 
+0000003841 00000 n 
+0000003967 00000 n 
+0000004693 00000 n 
 trailer
 << /Size 10 /Root 1 0 R >>
 startxref
-4953
+4819
 %%EOF

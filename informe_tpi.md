@@ -6,7 +6,7 @@ Institucion: Tecnicatura Universitaria en Programacion a Distancia
 Materia: Programacion 1  
 Titulo: Gestion de Datos de Paises en Python  
 Integrantes: Acuña Leandro - Alan Benitez  
-Fecha de entrega: pendiente
+Fecha de entrega: 2 de junio de 2026
 
 ## Indice
 
@@ -14,9 +14,8 @@ Fecha de entrega: pendiente
 2. Marco teorico
 3. Decisiones tecnicas y arquitectura
 4. Flujo del programa
-5. Capturas de ejecucion
-6. Dificultades y conclusiones
-7. Bibliografia
+5. Dificultades y conclusiones
+6. Bibliografia
 
 ## Objetivo
 
@@ -79,10 +78,6 @@ Usuario elige opcion
   +--> Mostrar estadisticas
   +--> Salir
 ```
-
-## Capturas de ejecucion
-
-Pendiente: agregar capturas del programa funcionando.
 
 ## Dificultades y conclusiones
 

@@ -26,7 +26,6 @@ Todos los paises se almacenan en una lista y se leen/escriben desde `paises.csv`
 - `paises.csv`: dataset base con 20 paises.
 - `informe_tpi.md`: version editable del informe academico.
 - `informe_tpi.pdf`: informe academico en formato PDF.
-- `Consigna_TPI_Prog-1.docx.pdf`: consigna original del trabajo.
 
 ## Como ejecutar
 
@@ -80,10 +79,6 @@ Cantidad de paises por continente
 ## Persistencia de datos
 
 Las altas y actualizaciones se guardan automaticamente en `paises.csv`, por lo que los cambios se conservan despues de cerrar el programa.
-
-## Video demostrativo
-
-Pendiente: agregar link publico del video de 10 a 15 minutos.
 
 ## Documentacion PDF
 
