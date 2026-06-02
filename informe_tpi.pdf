@@ -1,0 +1,297 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R] /Count 3 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Length 1771 >>
+stream
+BT
+/F1 11 Tf
+50 790 Td
+14 TL
+(TRABAJO PRACTICO INTEGRADOR) Tj
+T*
+() Tj
+T*
+(CARATULA) Tj
+T*
+() Tj
+T*
+(Institucion: Tecnicatura Universitaria en Programacion a Distancia) Tj
+T*
+(Materia: Programacion 1) Tj
+T*
+(Titulo: Gestion de Datos de Paises en Python) Tj
+T*
+(Integrantes: Acuña Leandro - Alan Benitez) Tj
+T*
+(Fecha de entrega: pendiente) Tj
+T*
+() Tj
+T*
+(INDICE) Tj
+T*
+() Tj
+T*
+(1. Objetivo) Tj
+T*
+(2. Marco teorico) Tj
+T*
+(3. Decisiones tecnicas y arquitectura) Tj
+T*
+(4. Flujo del programa) Tj
+T*
+(5. Capturas de ejecucion) Tj
+T*
+(6. Dificultades y conclusiones) Tj
+T*
+(7. Bibliografia) Tj
+T*
+() Tj
+T*
+(OBJETIVO) Tj
+T*
+() Tj
+T*
+(Desarrollar una aplicacion de consola en Python que permita gestionar informacion de) Tj
+T*
+(paises usando listas, diccionarios, funciones, estructuras condicionales y) Tj
+T*
+(repetitivas, lectura y escritura de archivos CSV, filtros, ordenamientos y) Tj
+T*
+(estadisticas basicas.) Tj
+T*
+() Tj
+T*
+(MARCO TEORICO) Tj
+T*
+() Tj
+T*
+(LISTAS) Tj
+T*
+() Tj
+T*
+(Una lista es una estructura de datos que permite almacenar varios elementos en un) Tj
+T*
+(orden determinado. En el proyecto se utiliza una lista para guardar todos los paises) Tj
+T*
+(cargados desde el archivo CSV.) Tj
+T*
+() Tj
+T*
+(DICCIONARIOS) Tj
+T*
+() Tj
+T*
+(Un diccionario almacena datos mediante pares clave-valor. En el sistema, cada pais es) Tj
+T*
+(representado con un diccionario que contiene `nombre`, `poblacion`, `superficie` y) Tj
+T*
+(`continente`.) Tj
+T*
+() Tj
+T*
+(FUNCIONES) Tj
+T*
+() Tj
+T*
+(Las funciones permiten dividir el programa en partes mas pequenas y reutilizables.) Tj
+T*
+(Cada funcion del sistema tiene una responsabilidad concreta, por ejemplo cargar datos,) Tj
+T*
+(guardar datos, buscar, filtrar u ordenar.) Tj
+T*
+() Tj
+T*
+(CONDICIONALES) Tj
+T*
+(Pagina 1) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 1631 >>
+stream
+BT
+/F1 11 Tf
+50 790 Td
+14 TL
+() Tj
+T*
+(Las estructuras condicionales permiten tomar decisiones segun la opcion elegida por el) Tj
+T*
+(usuario o segun el resultado de una validacion.) Tj
+T*
+() Tj
+T*
+(ORDENAMIENTOS) Tj
+T*
+() Tj
+T*
+(El programa utiliza ordenamientos para mostrar los paises por nombre, poblacion o) Tj
+T*
+(superficie, tanto en forma ascendente como descendente.) Tj
+T*
+() Tj
+T*
+(ESTADISTICAS BASICAS) Tj
+T*
+() Tj
+T*
+(Se calculan indicadores como mayor y menor poblacion, promedio de poblacion, promedio) Tj
+T*
+(de superficie y cantidad de paises por continente.) Tj
+T*
+() Tj
+T*
+(ARCHIVOS CSV) Tj
+T*
+() Tj
+T*
+(El formato CSV permite guardar datos tabulares en texto plano. El programa lee los) Tj
+T*
+(paises desde `paises.csv` y guarda ahi las modificaciones realizadas.) Tj
+T*
+() Tj
+T*
+(DECISIONES TECNICAS Y ARQUITECTURA) Tj
+T*
+() Tj
+T*
+(El sistema se implementa en un unico archivo `main.py` para facilitar la entrega y) Tj
+T*
+(correccion. La informacion se administra en memoria como una lista de diccionarios y) Tj
+T*
+(se sincroniza con el archivo CSV cada vez que se agrega o actualiza un pais.) Tj
+T*
+() Tj
+T*
+(FLUJO DEL PROGRAMA) Tj
+T*
+() Tj
+T*
+(```text) Tj
+T*
+(Inicio) Tj
+T*
+(|) Tj
+T*
+(v) Tj
+T*
+(Cargar paises desde CSV) Tj
+T*
+(|) Tj
+T*
+(v) Tj
+T*
+(Mostrar menu principal) Tj
+T*
+(|) Tj
+T*
+(v) Tj
+T*
+(Usuario elige opcion) Tj
+T*
+(|) Tj
+T*
+(+--> Listar paises) Tj
+T*
+(+--> Agregar pais y guardar CSV) Tj
+T*
+(+--> Actualizar pais y guardar CSV) Tj
+T*
+(+--> Buscar pais) Tj
+T*
+(+--> Filtrar paises) Tj
+T*
+(+--> Ordenar paises) Tj
+T*
+(+--> Mostrar estadisticas) Tj
+T*
+(+--> Salir) Tj
+T*
+(```) Tj
+T*
+(Pagina 2) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 794 >>
+stream
+BT
+/F1 11 Tf
+50 790 Td
+14 TL
+() Tj
+T*
+(CAPTURAS DE EJECUCION) Tj
+T*
+() Tj
+T*
+(Pendiente: agregar capturas del programa funcionando.) Tj
+T*
+() Tj
+T*
+(DIFICULTADES Y CONCLUSIONES) Tj
+T*
+() Tj
+T*
+(Una dificultad esperada es validar correctamente los datos ingresados por el usuario y) Tj
+T*
+(evitar errores cuando el CSV tenga datos invalidos. Se resolvio separando la lectura,) Tj
+T*
+(la validacion y el guardado en funciones distintas.) Tj
+T*
+() Tj
+T*
+(Como conclusion, el proyecto permite practicar estructuras de datos, modularizacion y) Tj
+T*
+(persistencia de informacion en archivos.) Tj
+T*
+() Tj
+T*
+(BIBLIOGRAFIA) Tj
+T*
+() Tj
+T*
+(* Documentacion oficial de Python: https://docs.python.org/3/) Tj
+T*
+(* Modulo CSV de Python: https://docs.python.org/3/library/csv.html) Tj
+T*
+(Pagina 3) Tj
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 8 0 R >>
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000002047 00000 n 
+0000002173 00000 n 
+0000003856 00000 n 
+0000003982 00000 n 
+0000004827 00000 n 
+trailer
+<< /Size 10 /Root 1 0 R >>
+startxref
+4953
+%%EOF
