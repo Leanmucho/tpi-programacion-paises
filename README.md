@@ -26,6 +26,7 @@ Todos los paises se almacenan en una lista y se leen/escriben desde `paises.csv`
 - `paises.csv`: dataset base con 20 paises.
 - `informe_tpi.md`: version editable del informe academico.
 - `informe_tpi.pdf`: informe academico en formato PDF.
+- `assets/`: diagrama de flujo y capturas de ejecucion utilizadas en el informe.
 
 ## Como ejecutar
 
