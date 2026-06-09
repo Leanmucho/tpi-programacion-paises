@@ -31,7 +31,7 @@ def cargar_paises(ruta_csv=CSV_PATH):
                 except (TypeError, ValueError):
                     print(f"Error de formato en la fila {numero_fila}. Se omite.")
     except FileNotFoundError:
-        print("No se encontro paises.csv. Se iniciara con una lista vacia.")
+        print("No se encontró paises.csv. Se iniciará con una lista vacía.")
 
     return paises
 
@@ -46,7 +46,7 @@ def guardar_paises(paises, ruta_csv=CSV_PATH):
 def validar_texto_csv(valor):
     texto = str(valor).strip()
     if not texto:
-        raise ValueError("Campo vacio")
+        raise ValueError("Campo vacío")
     return texto
 
 
@@ -55,7 +55,7 @@ def pedir_texto(mensaje):
         texto = input(mensaje).strip()
         if texto:
             return texto
-        print("El campo no puede estar vacio.")
+        print("El campo no puede estar vacío.")
 
 
 def pedir_entero(mensaje, minimo=0):
@@ -66,9 +66,9 @@ def pedir_entero(mensaje, minimo=0):
             numero = int(valor)
             if numero >= minimo:
                 return numero
-            print(f"Debe ingresar un numero mayor o igual a {minimo}.")
+            print(f"Debe ingresar un número mayor o igual a {minimo}.")
         except ValueError:
-            print("Debe ingresar un numero entero valido.")
+            print("Debe ingresar un número entero válido.")
 
 
 def pedir_opcion(mensaje, opciones_validas):
@@ -76,7 +76,7 @@ def pedir_opcion(mensaje, opciones_validas):
         opcion = input(mensaje).strip().lower()
         if opcion in opciones_validas:
             return opcion
-        print("Opcion invalida. Intente nuevamente.")
+        print("Opción inválida. Intente nuevamente.")
 
 
 def normalizar(texto):
@@ -91,15 +91,15 @@ def normalizar(texto):
 def mostrar_pais(pais):
     print(
         f"{pais['nombre']:<25} | "
-        f"Poblacion: {pais['poblacion']:>12} | "
-        f"Superficie: {pais['superficie']:>10} km2 | "
+        f"Población: {pais['poblacion']:>12} | "
+        f"Superficie: {pais['superficie']:>10} km² | "
         f"Continente: {pais['continente']}"
     )
 
 
 def mostrar_paises(paises):
     if not paises:
-        print("No hay paises para mostrar.")
+        print("No hay países para mostrar.")
         return
 
     for pais in paises:
@@ -107,15 +107,15 @@ def mostrar_paises(paises):
 
 
 def agregar_pais(paises):
-    print("\nAgregar pais")
+    print("\nAgregar país")
     nombre = pedir_texto("Nombre: ")
 
     if buscar_exacta(paises, nombre) is not None:
-        print("Ya existe un pais con ese nombre.")
+        print("Ya existe un país con ese nombre.")
         return
 
-    poblacion = pedir_entero("Poblacion: ", minimo=1)
-    superficie = pedir_entero("Superficie en km2: ", minimo=1)
+    poblacion = pedir_entero("Población: ", minimo=1)
+    superficie = pedir_entero("Superficie en km²: ", minimo=1)
     continente = pedir_texto("Continente: ")
 
     paises.append(
@@ -127,7 +127,7 @@ def agregar_pais(paises):
         }
     )
     guardar_paises(paises)
-    print("Pais agregado y guardado en el CSV.")
+    print("País agregado y guardado en el CSV.")
 
 
 def buscar_exacta(paises, nombre):
@@ -139,23 +139,23 @@ def buscar_exacta(paises, nombre):
 
 
 def actualizar_pais(paises):
-    print("\nActualizar pais")
-    nombre = pedir_texto("Ingrese el nombre exacto del pais: ")
+    print("\nActualizar país")
+    nombre = pedir_texto("Ingrese el nombre exacto del país: ")
     indice = buscar_exacta(paises, nombre)
 
     if indice is None:
-        print("No se encontro un pais con ese nombre.")
+        print("No se encontró un país con ese nombre.")
         return
 
     mostrar_pais(paises[indice])
-    paises[indice]["poblacion"] = pedir_entero("Nueva poblacion: ", minimo=1)
-    paises[indice]["superficie"] = pedir_entero("Nueva superficie en km2: ", minimo=1)
+    paises[indice]["poblacion"] = pedir_entero("Nueva población: ", minimo=1)
+    paises[indice]["superficie"] = pedir_entero("Nueva superficie en km²: ", minimo=1)
     guardar_paises(paises)
     print("Datos actualizados y guardados en el CSV.")
 
 
 def buscar_por_nombre(paises):
-    print("\nBuscar pais")
+    print("\nBuscar país")
     busqueda = normalizar(pedir_texto("Nombre o parte del nombre: "))
     resultados = [
         pais for pais in paises if busqueda in normalizar(pais["nombre"])
@@ -164,7 +164,7 @@ def buscar_por_nombre(paises):
     if resultados:
         mostrar_paises(resultados)
     else:
-        print("No se encontraron paises con esa busqueda.")
+        print("No se encontraron países con esa búsqueda.")
 
 
 def filtrar_por_continente(paises):
@@ -176,8 +176,10 @@ def filtrar_por_continente(paises):
 
 
 def filtrar_por_rango(paises, campo):
-    minimo = pedir_entero(f"{campo.capitalize()} minima: ", minimo=0)
-    maximo = pedir_entero(f"{campo.capitalize()} maxima: ", minimo=minimo)
+    etiquetas = {"poblacion": "Población", "superficie": "Superficie"}
+    etiqueta = etiquetas.get(campo, campo.capitalize())
+    minimo = pedir_entero(f"{etiqueta} mínima: ", minimo=0)
+    maximo = pedir_entero(f"{etiqueta} máxima: ", minimo=minimo)
     resultados = [pais for pais in paises if minimo <= pais[campo] <= maximo]
     mostrar_resultados_filtro(resultados)
 
@@ -186,15 +188,15 @@ def mostrar_resultados_filtro(resultados):
     if resultados:
         mostrar_paises(resultados)
     else:
-        print("No hay paises que cumplan con ese filtro.")
+        print("No hay países que cumplan con ese filtro.")
 
 
 def menu_filtros(paises):
     print("\nFiltros")
     print("1. Por continente")
-    print("2. Por rango de poblacion")
+    print("2. Por rango de población")
     print("3. Por rango de superficie")
-    opcion = pedir_opcion("Seleccione una opcion: ", {"1", "2", "3"})
+    opcion = pedir_opcion("Seleccione una opción: ", {"1", "2", "3"})
 
     if opcion == "1":
         filtrar_por_continente(paises)
@@ -207,7 +209,7 @@ def menu_filtros(paises):
 def ordenar_paises(paises):
     print("\nOrdenamientos")
     print("1. Nombre")
-    print("2. Poblacion")
+    print("2. Población")
     print("3. Superficie")
     campo_opcion = pedir_opcion("Seleccione el campo: ", {"1", "2", "3"})
 
@@ -229,7 +231,7 @@ def ordenar_paises(paises):
 
 def mostrar_estadisticas(paises):
     if not paises:
-        print("No hay datos para calcular estadisticas.")
+        print("No hay datos para calcular estadísticas.")
         return
 
     pais_mayor_poblacion = max(paises, key=lambda pais: pais["poblacion"])
@@ -242,28 +244,28 @@ def mostrar_estadisticas(paises):
         continente = pais["continente"]
         cantidad_por_continente[continente] = cantidad_por_continente.get(continente, 0) + 1
 
-    print("\nEstadisticas")
-    print("Pais con mayor poblacion:")
+    print("\nEstadísticas")
+    print("País con mayor población:")
     mostrar_pais(pais_mayor_poblacion)
-    print("Pais con menor poblacion:")
+    print("País con menor población:")
     mostrar_pais(pais_menor_poblacion)
-    print(f"Promedio de poblacion: {promedio_poblacion:.2f}")
-    print(f"Promedio de superficie: {promedio_superficie:.2f} km2")
-    print("Cantidad de paises por continente:")
+    print(f"Promedio de población: {promedio_poblacion:.2f}")
+    print(f"Promedio de superficie: {promedio_superficie:.2f} km²")
+    print("Cantidad de países por continente:")
 
     for continente, cantidad in sorted(cantidad_por_continente.items()):
         print(f"- {continente}: {cantidad}")
 
 
 def mostrar_menu():
-    print("\nGestion de Datos de Paises")
-    print("1. Listar paises")
-    print("2. Agregar pais")
-    print("3. Actualizar poblacion y superficie")
-    print("4. Buscar pais por nombre")
-    print("5. Filtrar paises")
-    print("6. Ordenar paises")
-    print("7. Mostrar estadisticas")
+    print("\nGestión de Datos de Países")
+    print("1. Listar países")
+    print("2. Agregar país")
+    print("3. Actualizar población y superficie")
+    print("4. Buscar país por nombre")
+    print("5. Filtrar países")
+    print("6. Ordenar países")
+    print("7. Mostrar estadísticas")
     print("0. Salir")
 
 
@@ -272,7 +274,7 @@ def ejecutar_programa():
 
     while True:
         mostrar_menu()
-        opcion = pedir_opcion("Seleccione una opcion: ", {"0", "1", "2", "3", "4", "5", "6", "7"})
+        opcion = pedir_opcion("Seleccione una opción: ", {"0", "1", "2", "3", "4", "5", "6", "7"})
 
         if opcion == "0":
             print("Programa finalizado.")
