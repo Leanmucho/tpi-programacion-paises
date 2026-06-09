@@ -7,7 +7,6 @@ Carrera: Tecnicatura Universitaria en Programacion
 Materia: Programacion 1  
 Titulo: Gestion de Datos de Paises en Python  
 Integrantes: Acuña Leandro - Alan Benitez  
-Fecha de entrega: 2 de junio de 2026
 
 ## Indice
 
